@@ -5,6 +5,9 @@ const App = ()=> {
   return(
     <main className="app">
       <h1>Click Counter</h1>
+      <button>
+        Click Me
+      </button>
     </main>
   )
 }
