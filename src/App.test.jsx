@@ -8,10 +8,17 @@ test('vitest is working', () => {
 });
 
 describe("rtl tests", () => {
+    afterEach(() => cleanup())
     it("renders h1", () => {
         render(<App />)
         expect(
             screen.getByRole("heading",{ name: /click counter/i})
+        ).toBeInTheDocument();
+    });
+        it("renders button", () => {
+        render(<App />)
+        expect(
+            screen.getByRole("button",{ name: /click me/i})
         ).toBeInTheDocument();
     });
 });
