@@ -1,5 +1,17 @@
-import { expect, test } from 'vitest'
+import "@testing-library/jest-dom/vitest"
+import { screen, render, cleanup } from "@testing-library/react";
+import { expect, test, it, afterEach, describe } from 'vitest'
+import App from "./App"
 
 test('vitest is working', () => {
     expect(2+2).toBe(4);
+});
+
+describe("rtl tests", () => {
+    it("renders h1", () => {
+        render(<App />)
+        expect(
+            screen.getByRole("heading",{ name: /click counter/i})
+        ).toBeInTheDocument();
+    });
 });
