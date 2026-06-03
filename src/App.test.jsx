@@ -28,4 +28,8 @@ describe("rtl tests", () => {
         await user.click(screen.getByRole("button", { name: /click me/i }));
         expect(screen.getByText("Count: 1"))
     });
+    test("the count has a count class", () => {
+        render(<App />);
+        expect(screen.getByText("Count: 0")).toHaveClass("count");
+    });
 });
