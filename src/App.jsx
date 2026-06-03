@@ -1,18 +1,22 @@
 import { useState } from "react"
+import { Analytics } from "@vercel/analytics/react"
 import './App.css'
 
 const App = () => {
   const [count, setCount] = useState(0);
   return (
-    <main className="app">
-      <h1>Click Counter</h1>
-      <button
-        onClick={() => setCount(count + 1)}
-      >
-        Click Me
-      </button>
-      <p className="count">Count: {count}</p>
-    </main>
+    <>
+      <main className="app">
+        <h1>Click Counter</h1>
+        <button
+          onClick={() => setCount(count + 1)}
+        >
+          Click Me
+        </button>
+        <p className="count">Count: {count}</p>
+      </main>
+      <Analytics />
+    </>
   )
 }
 
