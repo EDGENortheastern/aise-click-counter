@@ -23,7 +23,7 @@ test('vitest is working', () => {
 });
 ```
 
-Run `npm test` — if this passes, your setup is good. Now you can trust future failures are real failures.
+Run `npm test` or `npm t` — if this passes, your setup is good. Now you can trust future failures are real failures.
 
 ---
 
