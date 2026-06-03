@@ -11,7 +11,7 @@ const App = () => {
       >
         Click Me
       </button>
-      <p>Count: {count}</p>
+      <p className="count">Count: {count}</p>
     </main>
   )
 }
